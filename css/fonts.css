@@ -1,0 +1,7 @@
+/* font-family命名规则: 可以包含中文、英文、数字、空格、下划线（_）、连字符（-）等，但不能包含特殊符号（如 !、@、# 等）。*/
+@font-face {
+  font-family: "MySpecialFont";
+  src: url("/fonts/my-font.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
