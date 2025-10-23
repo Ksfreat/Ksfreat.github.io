@@ -1,0 +1,16 @@
+delay = 0.020; // 基础延迟时间
+myDelay = delay * textIndex; // 根据字符索引计算每个字符的延迟时间
+t = (time - inPoint) - myDelay; // 计算当前时间相对于图层入点和字符延迟的时间差
+
+if (t >= 0) { // 如果时间差大于等于0，开始动画
+    freq = 3; // 频率，控制弹性振动的快慢
+    amplitude = 50; // 振幅，控制弹性振动的幅度
+    decay = 7.0; // 衰减力度，控制弹性逐渐减弱的速度
+    
+    // 弹性动画公式
+    s = amplitude * Math.cos(freq * t * 2 * Math.PI) / Math.exp(decay * t);
+    
+    [s, s]; // 返回结果，这里假设是二维属性（如位置、缩放等），所以返回两个相同的值
+} else {
+    value; // 如果时间差小于0，保持属性的原始值
+}
