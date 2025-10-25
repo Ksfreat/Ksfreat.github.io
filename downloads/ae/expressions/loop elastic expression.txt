@@ -1,0 +1,19 @@
+delay = 0.020;
+myDelay = delay * textIndex;
+t = (time - inPoint) - myDelay;
+
+// 动画持续时间
+duration = 1.0; // 你可以根据需要调整这个值
+
+// 循环相关计算
+cycleTime = t % duration; // 使用模运算来实现时间循环
+
+if (cycleTime >= 0) {
+    freq = 3;
+    amplitude = 50;
+    decay = 7.0;
+    s = amplitude * Math.cos(freq * cycleTime * 2 * Math.PI) / Math.exp(decay * cycleTime);
+    [s, s];
+} else {
+    value;
+}
