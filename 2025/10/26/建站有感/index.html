@@ -140,7 +140,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://ksfreat.github.io/images/redefine-og.webp">
 <meta property="article:published_time" content="2025-10-25T20:05:12.000Z">
-<meta property="article:modified_time" content="2025-10-28T17:36:57.471Z">
+<meta property="article:modified_time" content="2025-11-02T12:29:28.102Z">
 <meta property="article:author" content="Ksfreat">
 <meta property="article:tag" content="建站">
 <meta property="article:tag" content="日常">
@@ -548,8 +548,8 @@
     
         <span class="article-date article-meta-item">
             <i class="fa-regular fa-wrench"></i>&nbsp;
-            <span class="desktop">2025-10-29 01:36:57</span>
-            <span class="mobile">2025-10-29 01:36:57</span>
+            <span class="desktop">2025-11-02 20:29:28</span>
+            <span class="mobile">2025-11-02 20:29:28</span>
             <span class="hover-info">更新</span>
         </span>
     
@@ -591,12 +591,12 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>710 字</span>
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>929 字</span>
         </span>
     
     
         <span class="article-min2read article-meta-item">
-            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 分钟</span>
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>3 分钟</span>
         </span>
     
     
@@ -615,28 +615,33 @@
 
 
 		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
-			<h1 id="从零开始的个人网站搭建日记"><a href="#从零开始的个人网站搭建日记" class="headerlink" title="从零开始的个人网站搭建日记"></a>从零开始的个人网站搭建日记</h1><h2 id="初衷没有初衷"><a href="#初衷没有初衷" class="headerlink" title="初衷没有初衷"></a>初衷没有初衷</h2><ul>
-<li>一开始上网搜索本来是想要找 KrKrDump 这个解包软件的，因为之前发现 GARbro 和 KrkrExtract 都不能成功解包游戏资源，于是在这个过程中发现了一个界面很整洁很漂亮的博客网站，这也使我自己想做一个博客网站的想法萌芽。</li>
+			<h1 id="从零开始的个人网站搭建日记"><a href="#从零开始的个人网站搭建日记" class="headerlink" title="从零开始的个人网站搭建日记"></a>从零开始的个人网站搭建日记</h1><h2 id="初衷"><a href="#初衷" class="headerlink" title="初衷"></a>初衷</h2><ul>
+<li>因为想要获取当时喜欢玩的一个游戏的原图 CG，所以一开始上网搜索本来是想要找 KrKrDump 这个解包软件的，那为什么使用这个解包软件呢？因为之前发现 GARbro 和 KrkrExtract 都不能成功解包游戏资源（GARbro 对于加密的文件会显示无法通过压缩包的形式来打开，而 KrkrExtract 使用也遇到了一些问题，解包时提示内存不够，即使我将虚拟内存提高也无法成功），而就在这个过程中发现了一个界面很整洁很漂亮的博客网站，这也使我自己想做一个博客网站的想法萌芽。</li>
 <li>有点奇妙的经历吧？</li>
 </ul>
 <h2 id="搭建过程：踩坑与成就感并存"><a href="#搭建过程：踩坑与成就感并存" class="headerlink" title="搭建过程：踩坑与成就感并存"></a>搭建过程：踩坑与成就感并存</h2><h3 id="1-功能折腾及烦恼"><a href="#1-功能折腾及烦恼" class="headerlink" title="1. 功能折腾及烦恼"></a>1. 功能折腾及烦恼</h3><ul>
-<li>最讨厌友链这部分了。实际做这部分的时候试了不下 10 次（TvT），从本地调试到部署，一开始以为是友链内容配置文件，后来又试着修改友链 .ejs 文件，再后来尝试修改 template 的值（比如 links,friends,friends-link），最后还是将放置友链页面的文件夹放在根目录，以及 template 和友链内容配置文件命名都统一为 links 后最终解决了。当然！虽然过程很麻烦，甚至做的想死，但是看到最终做出来的时候还是非常开心的，hhhh~</li>
-<li>标签也是。明明写好了 title 属性的值却在实际页面看不到（无病呻吟），开始还以为本地调试和部署会不一样（但是确实是一样的），后来在本地调试了很多次都不行，于是尝试将标签从二级菜单分离出来将其作为一级菜单，其页面所在文件夹也移至根目录（这次终于成功了），最后总结发现标签作为二级菜单时会导致不能和 tags 配置文件链接最终标签页面会显示空白。</li>
+<li>友链这部分花了比较长时间。实际做这部分的时候试了不下 10 次（TvT），从本地调试到部署，一开始以为是友链内容配置文件，后来又试着修改友链 .ejs 文件，再后来尝试修改 template 的值（比如 links,friends,friends-link），最后还是将放置友链页面的文件夹放在根目录，以及 template 和友链内容配置文件命名都统一为 links 后最终解决了。当然！虽然过程很麻烦，甚至做的想死，但是看到最终做出来的时候还是非常开心的，hhhh~</li>
+<li>标签这个模块也是有点麻烦。当时写好了 title 属性的值却在实际页面看不到标题显示，甚至标签内容也看不见，一开始还以为本地调试和部署会不一样（但确实是一样的），所以后来在本地调试了很多次都不行，于是尝试将标签从二级菜单分离出来将其作为一级菜单，也去除了二级菜单图标显示，这个标签页面所在文件夹也移至根目录（这次终于成功了！T^T），最后总结发现标签作为二级菜单时会导致不能和 tags 配置文件关联链接，所以最终标签页面会显示空白。</li>
 </ul>
 <h3 id="2-部署上线"><a href="#2-部署上线" class="headerlink" title="2. 部署上线"></a>2. 部署上线</h3><ul>
 <li>自 2025-09-21 下午时分部署，到现在基本完善已经过去了 4 天 9 小时，很开心能看到自己的网站，很开心！</li>
+<li>以后我会继续更新我的网站的，分享我自己喜欢的事物，记录我的生活。</li>
 </ul>
 <h2 id="现在的样子"><a href="#现在的样子" class="headerlink" title="现在的样子"></a>现在的样子</h2><p>网站目前有四个板块：</p>
 <ul>
-<li>首页放最新的日记和以及分享</li>
-<li>侧边栏可以跳转到说说，相册，标签和分类（希望你喜欢）</li>
-<li>相册页目前上了乌镇和太原植物园以及一些日常照片</li>
-<li>播放器固定在左下角，随时能切歌，写下这篇日记时，网站已存有 12 首喜欢的歌，希望你能喜欢</li>
+<li>导航页：首页，归档，关于，友情链接</li>
+<li>侧边栏：说说，相册，标签和分类</li>
+<li>首页：文章列表，主题切换</li>
+<li>音乐播放器：固定在左下角，随时能切歌（写下这篇日记时，网站已存有 12 首喜欢的歌）</li>
 </ul>
 <h2 id="期望与改进"><a href="#期望与改进" class="headerlink" title="期望与改进"></a>期望与改进</h2><ul>
+<li><p>在目前主题切换使用的背景底图分辨是大于 1920*1080 的标准 16:9 分辨率，但是清晰度不是很高，后续会考虑更换背景</p>
+</li>
 <li><p>在相册页面，由于目前上传的是未压缩的 jpg 格式原图，所以尽管图片很少但也不免会发生加载很慢的情况，所以以后会考虑图片压缩为 webp 格式，如有给你带来不好的体验请原谅！</p>
+</li>
+<li><p>希望后续学习 live2d 能够加入自己喜欢的人物（应当具有面捕功能，表情切换，互动音乐，交互提示）</p>
 <blockquote>
-<p>碎碎念：<br>希望能和你一起继续学习，希望能和你继续记录…<br>“关于这个网站”的页面，记录下它的成长~</p>
+<p>碎碎念：<br>希望能持续学习，希望持续记录我的生活<br>“关于这个网站”的页面，记录下它的成长~</p>
 </blockquote>
 </li>
 </ul>
@@ -654,7 +659,7 @@
         
             <li>
                 <strong>更新于
-                    :</strong> 2025-10-29 01:36:57
+                    :</strong> 2025-11-02 20:29:28
             </li>
         
         <li>
@@ -745,7 +750,7 @@
 	<div class="post-toc">
 		<div class="toc-title">目录</div>
 		<div class="page-title">Re：从零开始的建站日记</div>
-		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%97%A5%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">从零开始的个人网站搭建日记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E8%A1%B7%E6%B2%A1%E6%9C%89%E5%88%9D%E8%A1%B7"><span class="nav-number">1.1.</span> <span class="nav-text">初衷没有初衷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%EF%BC%9A%E8%B8%A9%E5%9D%91%E4%B8%8E%E6%88%90%E5%B0%B1%E6%84%9F%E5%B9%B6%E5%AD%98"><span class="nav-number">1.2.</span> <span class="nav-text">搭建过程：踩坑与成就感并存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%8A%9F%E8%83%BD%E6%8A%98%E8%85%BE%E5%8F%8A%E7%83%A6%E6%81%BC"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 功能折腾及烦恼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 部署上线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E5%9C%A8%E7%9A%84%E6%A0%B7%E5%AD%90"><span class="nav-number">1.3.</span> <span class="nav-text">现在的样子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%9F%E6%9C%9B%E4%B8%8E%E6%94%B9%E8%BF%9B"><span class="nav-number">1.4.</span> <span class="nav-text">期望与改进</span></a></li></ol></li></ol>
+		<ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%97%A5%E8%AE%B0"><span class="nav-number">1.</span> <span class="nav-text">从零开始的个人网站搭建日记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E8%A1%B7"><span class="nav-number">1.1.</span> <span class="nav-text">初衷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B%EF%BC%9A%E8%B8%A9%E5%9D%91%E4%B8%8E%E6%88%90%E5%B0%B1%E6%84%9F%E5%B9%B6%E5%AD%98"><span class="nav-number">1.2.</span> <span class="nav-text">搭建过程：踩坑与成就感并存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%8A%9F%E8%83%BD%E6%8A%98%E8%85%BE%E5%8F%8A%E7%83%A6%E6%81%BC"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 功能折腾及烦恼</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%83%A8%E7%BD%B2%E4%B8%8A%E7%BA%BF"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 部署上线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E5%9C%A8%E7%9A%84%E6%A0%B7%E5%AD%90"><span class="nav-number">1.3.</span> <span class="nav-text">现在的样子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%9F%E6%9C%9B%E4%B8%8E%E6%94%B9%E8%BF%9B"><span class="nav-number">1.4.</span> <span class="nav-text">期望与改进</span></a></li></ol></li></ol>
 
 	</div>
 </div>
@@ -778,7 +783,7 @@
                     </span>
                     
                         <span>
-                            共 710 字
+                            共 929 字
                         </span>
                     
                 </p>
