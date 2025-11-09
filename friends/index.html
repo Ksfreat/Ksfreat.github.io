@@ -181,6 +181,73 @@
     
             
     
+            
+                
+                    <style>
+  /* 隐藏“切换衣服”按钮 */
+  #SwitchModelClothes {
+    display: none !important;
+  }
+
+  /* 隐藏“关于”按钮 */
+  #About {
+    display: none !important;
+  }
+  
+  @media (max-width: 768px) {
+    #oml2d-statusBar {
+      position: fixed !important;
+      top: 10% !important;
+      bottom: auto !important;     /* ←←← 关键！ */
+      right: 10px !important;
+      left: auto !important;
+
+      /* 保留原生动画，只改位置 */
+      width: 40px;
+      min-height: 40px;
+      padding: 7px 5px;
+      z-index: 9999;
+      border-radius: 5px;
+      border: 2px solid white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      background-color: var(--btn-bg);
+      color: white;
+      font-size: 14px;
+      writing-mode: vertical-lr;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    #oml2d-statusBar.animate-out {
+      transform: translateX(-110%) !important;
+    }
+  }
+  
+  # /* ========== 修复底部残留问题 ========== */
+  # .oml2d-stage {
+  #   overflow: hidden !important;
+  #   position: fixed !important;
+  #   z-index: 9997 !important;
+  # }
+
+  # .oml2d-tips {
+  #   transition: all 0.3s ease;
+  # }
+
+  # .oml2d-tips[style*="opacity: 0"],
+  # .oml2d-tips[style*="visibility: hidden"] {
+  #   display: none !important;
+  # }
+
+</style>
+
+                
+    
 
     
 <link rel="stylesheet" href="/css/style.css">
@@ -951,7 +1018,7 @@
 
 
 	
-<!-- hexo injector body_end start --><script data-pjax src="https://unpkg.com/oh-my-live2d"></script><script>const oml2d = OML2D.loadOml2d({dockedPosition:"right",mobileDisplay:true,models:[{"path":"/live2d/Murasame/Murasame.model3.json","scale":0.15,"position":[30,35],"stageStyle":{"width":270,"height":270},"mobileScale":0.1,"mobilePosition":[-10,23],"mobileStageStyle":{"width":180,"height":166}}],parentElement:document.body,primaryColor:"var(--btn-bg)",sayHello:false,tips:{style: {"width":230,"height":120,"left":"calc(50% - 20px)","top":"-100px"},mobileStyle: {"width":180,"height":80,"left":"calc(50% - 30px)","top":"-100px"},idleTips:{interval:15000,message:function(){
+<!-- hexo injector body_end start --><script data-pjax src="https://unpkg.com/oh-my-live2d"></script><script>const oml2d = OML2D.loadOml2d({dockedPosition:"right",mobileDisplay:true,models:[{"path":"/live2d/Murasame/Murasame.model3.json","scale":0.15,"position":[30,35],"stageStyle":{"width":270,"height":270},"mobileScale":0.1,"mobilePosition":[30,25],"mobileStageStyle":{"width":180,"height":320}}],parentElement:document.body,primaryColor:"var(--btn-bg)",sayHello:false,tips:{style: {"width":230,"height":120,"left":"calc(50% - 20px)","top":"-100px"},mobileStyle: {"width":180,"height":80,"left":"calc(50% - 30px)","top":"-100px"},idleTips:{interval:15000,message:function(){
   return axios.get('https://v1.hitokoto.cn?c=i')
     .then(function (response) {
       return response.data.hitokoto ;
