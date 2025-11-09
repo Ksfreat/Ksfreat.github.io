@@ -176,6 +176,11 @@
 
     <!--- Inject Part-->
     
+        
+            
+    
+            
+    
 
     
 <link rel="stylesheet" href="/css/style.css">
@@ -769,6 +774,17 @@
             </script>
         
         
+            
+                
+        
+                
+        
+                
+
+                    
+                        <script data-swup-reload-script src="https://unpkg.com/axios@1.6.8/dist/axios.min.js"></script>
+                    
+        
         
     </div>  
 </footer>
@@ -990,6 +1006,16 @@
 
 
 	
-</body>
+<!-- hexo injector body_end start --><script data-pjax src="https://unpkg.com/oh-my-live2d"></script><script>const oml2d = OML2D.loadOml2d({dockedPosition:"right",mobileDisplay:true,models:[{"path":"/live2d/Murasame/Murasame.model3.json","scale":0.15,"position":[30,35],"stageStyle":{"width":270,"height":270},"mobileScale":0.1,"mobilePosition":[-10,23],"mobileStageStyle":{"width":180,"height":166}}],parentElement:document.body,primaryColor:"var(--btn-bg)",sayHello:false,tips:{style: {"width":230,"height":120,"left":"calc(50% - 20px)","top":"-100px"},mobileStyle: {"width":180,"height":80,"left":"calc(50% - 30px)","top":"-100px"},idleTips:{interval:15000,message:function(){
+  return axios.get('https://v1.hitokoto.cn?c=i')
+    .then(function (response) {
+      return response.data.hitokoto ;
+    })
+    .catch(function (error) {
+      console.error(error);
+      return "欢迎来到我的小站~";
+    });
+}
+}}});</script><!-- hexo injector body_end end --></body>
 
 </html>
